@@ -11,6 +11,7 @@ import java.util.Date;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.json.simple.parser.JSONParser;
 
 
 public class LoopChain_restFul {
@@ -202,9 +203,10 @@ public class LoopChain_restFul {
 			os.close();
 	
 			//display what returns the POST request
+		
 	
 			StringBuilder sb = new StringBuilder();  
-			int HttpResult = con.getResponseCode(); 
+			int HttpResult = con.getResponseCode(); 	
 			System.out.println(con.getResponseMessage());
 			if (HttpResult == HttpURLConnection.HTTP_OK) {
 			    BufferedReader br = new BufferedReader(
@@ -217,7 +219,8 @@ public class LoopChain_restFul {
 			    System.out.println("" + sb.toString());  
 			} else {
 			    System.out.println(con.getResponseMessage());  
-			}  
+			} 
+			return (JSONObject) new JSONParser().parse(con.getResponseMessage());
 		}catch(Exception e){
 			e.printStackTrace();
 		}

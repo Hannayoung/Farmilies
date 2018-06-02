@@ -1,16 +1,18 @@
 package com.coin.Controller;
 
-import java.text.DateFormat;
-import java.util.Date;
+import java.util.Collection;
 import java.util.Locale;
+
+import javax.servlet.http.HttpServletRequest;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.coin.dao.UserDAO;
 
 /**
  * Handles requests for the application home page.
@@ -80,8 +82,12 @@ public class HomeController {
 	
 	//등록 및 수정하는 곳(농부가 자신이 게시물을 올리고, 수정하는 부분)
 		@RequestMapping(value = "/mains/index", method = RequestMethod.GET)
-		public String insert_farmer(Locale locale, Model model) {
+		public String insert_farmer(HttpServletRequest request, Model model) {
 
+			UserDAO user = new UserDAO();
+			
+			Collection<?> attributeValues = user.getListByIDLike("");
+			model.addAllAttributes(attributeValues);
 			return "search";
 		}
 	

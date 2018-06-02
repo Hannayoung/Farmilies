@@ -63,84 +63,13 @@
         <div id="navbar-ex">
           <ul class="nav nav-tabs" role="tablelist"> </ul>
           <div class="w3-container selection">
+          
+            <c:forEach items="{ldao}"var="item" >
             <div>
-              <h1> ��ȸ���� </h1>
+            <c:out value="{item.id}"/>
             </div>
-            <div>
-              <h1> ��ȸ���� </h1>
-            </div>
-            <div>
-              <h1> ��ȸ���� </h1>
-            </div>
-            <div>
-              <h1> ��ȸ���� </h1>
-            </div>
-            <div>
-              <h1> ��ȸ���� </h1>
-            </div>
-            <div>
-              <h1> ��ȸ���� </h1>
-            </div>
-            <div>
-              <h1> ��ȸ���� </h1>
-            </div>
-            <div>
-              <h1> ��ȸ���� </h1>
-            </div>
-            <div>
-              <h1> ��ȸ���� </h1>
-            </div>
-            <div>
-              <h1> ��ȸ���� </h1>
-            </div>
-            <div>
-              <h1> ��ȸ���� </h1>
-            </div>
-            <div>
-              <h1> ��ȸ���� </h1>
-            </div>
-            <div>
-              <h1> ��ȸ���� </h1>
-            </div>
-            <div>
-              <h1 draggable="true"> ��ȸ���� </h1>
-            </div>
-            <div>
-              <h1> ��ȸ���� </h1>
-            </div>
-            <div>
-              <h1> ��ȸ���� </h1>
-            </div>
-            <div>
-              <h1> ��ȸ���� </h1>
-            </div>
-            <div>
-              <h1> ��ȸ���� </h1>
-            </div>
-            <div>
-              <h1> ��ȸ���� </h1>
-            </div>
-            <div>
-              <h1> ��ȸ���� </h1>
-            </div>
-            <div>
-              <h1> ��ȸ���� </h1>
-            </div>
-            <div>
-              <h1> ��ȸ���� </h1>
-            </div>
-            <div>
-              <h1> ��ȸ���� </h1>
-            </div>
-            <div>
-              <h1> ��ȸ���� </h1>
-            </div>
-            <div>
-              <h1> ��ȸ���� </h1>
-            </div>
-            <div>
-              <h1> ��ȸ���� </h1>
-            </div>
+            </c:forEach> 
+            
           </div>
         </div>
       </div>
